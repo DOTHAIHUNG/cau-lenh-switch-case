@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <div>
+        <input type="number" id="month"/>
+        <button type="button" onclick="days();">Tinh so ngay</button>
+    </div><br>
+    <div id="display"></div>
+</form>
+<script>
+    var month;
+    function days() {
+        month = parseInt(document.getElementById("month").value);
+        switch (month) {
+            case 2:
+                document.getElementById("display").innerHTML = "Thang 2 co 28 hoac 29 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("display").innerHTML = "Thang " + month + " co 30 ngay";
+                break;
+            default:
+                document.getElementById("display").innerHTML = "Thang " + month + " co 31 ngay";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
